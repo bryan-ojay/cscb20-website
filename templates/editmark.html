@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="content-title">Edit Grades</h2>
+<form action ="{{ url_for('editmark') }}" method="POST">
+    <p>Select Student: <select name="student"></p>
+    {% for student in students %}
+    <option value="{{ student[0] }}">{{ student[0] }}</option>
+    {% endfor %}
+    </select>
+
+    <p>Select Assessment: <select name="assessment"></p>
+        {% for mark in ['a1', 'a2', 'a3', 'q1', 'q2', 'q3', 'q4', 'midterm', 'final'] %}
+        <option value="{{ mark }}">{{ mark }}</option>
+        {% endfor %}
+        </select>
+    
+    <p>Mark: <input type=text name=mark></p>
+    <input type = "submit" value = "Submit" /><br>
+
+</form>
+{% endblock %}

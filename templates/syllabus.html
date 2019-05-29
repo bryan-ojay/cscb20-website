@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="content-title">Course Syllabus</h2>
+<h4>General information from the syllabus is provided below.
+    The <a href="{{url_for('static', filename='res/dummypdf.pdf')}}" target="_blank">Full PDF Version</a> is also available to download.</h4>	
+
+<br>
+
+<h3 class="content-title">Grading Scheme and Policies</h3>
+<p><b>Assignments:</b> 22% — There are a total of 3 assignments. More information is available on the <a href="url_for('assignments')">assignments page</a>.</p>
+<p><b>Tutorials/Labs:</b> 4% — Marks will be given at the end of the semester.</p>
+<p><b>Midterm Exam:</b> 20% — Midterm information is available on the <a href="url_for('tests')">tests page</a>.</p>
+<p><b>Quizzes:</b> 8% — There are a total of 4 quizzes. More information is available on the <a href="url_for('tests')">quizzes page</a>.</p>
+<p><b>Final Exam:</b> 46% — Final exam information is available on the <a href="url_for('tests')">tests page</a>.</p>
+
+<br>
+
+<h3 class="content-title">Assignments</h3>
+<ul>
+    <li>You may be asked to work in pairs or groups for any of these three assignments.</li>
+    <li>Please <b>DO NOT</b> email your assignments to us. We will be using 
+        <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">MarkUs</a> for the submission of all assignments.</li>
+    <li>All assignments will be marked on the <b>UTSC Lab machines</b>. Before submitting your assignments,
+        make sure that they compile and execute on the UTSC Lab machines.</li>
+    <li>A <b>strict</b> silent policy takes effect 12 hours before <b>all exams and assignment due dates</b>.
+        That means no question about the assignments will be answered by the instructor or TAs whether it is 
+        in person, via email, on the discussion board, or any other platform.</li>
+</ul>
+
+<br>
+
+<h3 class="content-title">Quizzes</h3>
+<p>Once released, each quiz will be available to work on for about 24 hours or less. 
+    Depending on the quiz, you will have about 45 - 60 minutes to complete the quiz.
+    Quizzes will not happen in lecture; you will be able to work on these quizzes outside the
+    classroom. Explicit instructions will be made available on how these quizzes will
+    be submitted.</p>   
+
+<br>
+
+<h3 class="content-title">Tutorials/Labs</h3>
+<p>Tutorials are a great way to get hands-on experience on many topics covered in the course.</p>
+<p>Attendance is mandatory for tutorials. On some occasions, the TA will take attendance and 
+    assign small exercises for you to complete. All tutorials will begin from the 2nd week of the semester.</p>
+    
+<br>
+
+<h3 class="content-title">Final Exam</h3>
+<p>The final exam will have a length of 2 (or possibly 3) hours. The exam is comprehensive, and a mark of
+    40% or higher must be obtained to pass the course. Else, the highest possible final grade you will receive is 47%.</p>
+{% endblock %}

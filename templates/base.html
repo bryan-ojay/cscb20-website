@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <title>CSCB20 | {{ title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}" type="text/css">
+  </head>
+  <body>
+  <div class="header">
+    <a id="header-img" href="https://www.utoronto.ca" target="_blank" title="University of Toronto"></a>
+    <h1 id="header-title">Databases & Web Applications</h1>
+    {% if 'username' in session %}
+    <p class="user-info logged-in">Logged in as {{ session['username'] }} ({{ session['usertype'] }})</p><br>
+    {% else %}
+    <p class="user-info logged-out">Not logged in</p>
+    {% endif %}
+    <ul class="header-nav">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      {% if 'username' in session %}
+      <li><a href="{{ url_for('grades') }}">Grades</a></li>
+      <li><a href="https://piazza.com/class/jr7mjhytaij3jc" target="_blank">Piazza</a></li>
+      <li><a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">MarkUs</a></li>
+      <li><a href="{{ url_for('syllabus') }}">Syllabus</a></li>
+      <li><a href="{{ url_for('team') }}">Course Team</a></li>
+      <li><a href="{{ url_for('announcements') }}">Announcements</a></li>
+      <li><a href="{{ url_for('assignments') }}">Assignments</a></li>
+      <li><a href="{{ url_for('lectures') }}">Lectures</a></li>
+      <li><a href="{{ url_for('tutorials') }}">Tutorials/Labs</a></li>
+      <li><a href="{{ url_for('quizzes') }}">Quizzes</a></li>
+      <li><a href="{{ url_for('tests') }}">Tests</a></li>
+      <li><a href="{{ url_for('feedback') }}">Feedback!</a></li>
+      <li><a href="{{ url_for('logout') }}">Logout</a></li>
+      {% else %}
+      <li><a href="{{ url_for('login') }}">Login</a></li>
+      <li><a href="{{ url_for('register') }}">Register</a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="main">
+        {% block content %}
+        <h2 class="content-title">{{ title }}</h2>
+        <p>{{ content }}</p>
+        {% endblock %}
+    </div>
+    <div class="footer">
+      <small>CSCB20H3 - Introduction to Databases and Web Applications at the University of Toronto Scarborough</small><br>
+      <small>Website designed by Bryan Oladeji and Isaiah Murray.</small><br>
+      <small>- <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">Faculty of Computer Science</a> -</small>
+    </div>
+  </div>
+
+  </body>
+</html>

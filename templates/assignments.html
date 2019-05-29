@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="content-title">Assignments</h2>
+			
+<h3 class="content-title"><br>Assignment 1</h3>
+<h4 class="content-subtitle">Due Date: Feb 3rd, 2019 @ 11:59pm</h5>
+<p>The assignment handout is available here: <a href="{{url_for('static', filename='res/dummypdf.pdf')}}" target="_blank">a1_handout.pdf</a></p>
+<p>Please submit your assignment on <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">MarkUs</a>
+before the due date.</p>
+<br>
+
+<h3 class="content-title">Assignment 2</h3>
+<h4 class="content-subtitle">Due Date: Mar 13th, 2019 @ 11:59pm</h5>
+<p>The assignment handout is available here: <a href="{{url_for('static', filename='res/dummypdf.pdf')}}" target="_blank">a2_handout.pdf</a></p>
+<p>Please submit your assignment on <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">MarkUs</a>
+before the due date.</p>
+<br>
+
+<h3 class="content-title">Assignment 3</h3>
+<h4 class="content-subtitle">Due Date: Apr 5th, 2019 @ 11:59pm</h5>
+<p>The assignment handout is available here: <a href="{{url_for('static', filename='res/dummypdf.pdf')}}" target="_blank">a3_handout.pdf</a></p>
+<p>Please submit your assignment on <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">MarkUs</a>
+before the due date.</p>
+{% endblock %}

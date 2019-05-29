@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="content-title">All Grades</h2>
+<div class="table">
+      <div class="table-row">
+         <div class="table-head">Username</div>
+         <div class="table-head">A1</div>
+         <div class="table-head">A2</div>
+         <div class="table-head">A3</div>
+         <div class="table-head">Q1</div>
+         <div class="table-head">Q2</div>
+         <div class="table-head">Q3</div>
+         <div class="table-head">Q4</div>
+         <div class="table-head">Midterm</div>
+         <div class="table-head">Final</div>
+      </div>
+
+      {% for row in rows %}
+      <div class="table-row">
+         <div class="table-cell">{{row['username']}}</div>
+         <div class="table-cell">{{row["a1"]}}</div>
+         <div class="table-cell">{{ row["a2"]}}</div>
+         <div class="table-cell">{{row['a3']}}</div>
+         <div class="table-cell">{{row['q1']}}</div>
+         <div class="table-cell">{{row['q2']}}</div>
+         <div class="table-cell">{{row['q3']}}</div>
+         <div class="table-cell">{{row['q4']}}</div>
+         <div class="table-cell">{{row['midterm']}}</div>
+         <div class="table-cell">{{row['final']}}</div>
+      </div>
+      {% endfor %}
+</div>
+<br>
+<h3><a href="{{ url_for('remarks') }}">View Remark Requests</a></h3>
+<h3><a href="{{ url_for('editmark') }}">Edit Marks</a></h3>
+{% endblock %}

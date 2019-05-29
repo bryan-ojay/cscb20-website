@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="content-title">Register</h2>
+<form method="post">
+    <p>Account Type: <select name="usertype">
+        <option value="Student">Student</option>
+        <option value="Instructor">Instructor</option>
+    </select><br>
+    <p>Username: <input type=text name=username></p>
+    <p>Password: <input type=password name=password></p>
+    <input type=submit value=Submit>
+</form>
+{% if invalid %}
+<br><p class=invalid>That username is taken.</p>
+{% endif %}
+{% endblock %}

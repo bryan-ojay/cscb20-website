@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="content-title">All Feedback</h2>
+<div class="table">
+      <div class="table-row">
+            <div class="table-head">What Students Like About Your Teaching</div>
+            <div class="table-head">How to Improve Your Teaching</div>
+            <div class="table-head">What Students Like about Labs</div>
+            <div class="table-head">How to Improve Labs</div>
+      </div>
+
+         {% for row in rows %}
+         <div class="table-row">
+            <div class="table-cell">{{row["teach"]}}</div>
+            <div class="table-cell">{{row["teachimp"]}}</div>
+            <div class="table-cell">{{row["lab"]}}</div>
+            <div class="table-cell">{{row["labimp"]}}</div>
+         </div>
+         {% endfor %}
+</div>
+{% endblock %}

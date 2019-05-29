@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="content-title">Test Information</h2>
+			
+<h3 class="content-title"><br>Midterm Exam</h3>
+<p><b>Time:</b> Feb 11th, 2019 @ 9:00am
+<p><b>Location:</b> HL001</p>
+<ul>
+    <li>The midterm exam will be done during in-class time; there will be no lecture, however tutorials for this
+        week will still hold.</li>
+    <li>Any topics covered in lecture up to and including Week 5 may show up on the exam.</li>
+    <li>The midterm is worth 20% of your entire grade for the course.</li>
+    <li>Aids are not permitted.</li>
+    <li>Information on AccessAbility, remarks for the exam and other administrative details can be found in the
+        <a href="{{url_for('static', filename='res/dummypdf.pdf')}}">course syllabus</a>.</li>
+</ul> 
+
+Here is a comprehensive guide on what to study for the exam: <a href="{{url_for('static', filename='res/dummypdf.pdf')}}">CSCB20_MidtermExamStudyGuide.pdf</a>.<br>
+For additional practice, a past midterm is available here: <a href="{{url_for('static', filename='res/dummypdf.pdf')}}">b20_midterm-2016winter.pdf</a>
+<br>
+
+<h3 class="content-title"><br>Final Exam</h3>
+<p><b>Time:</b> TBA
+<p><b>Location:</b> TBA</p>
+<ul>
+    <li>The date for the final exam will be released once approved by the registar.</li>
+    <li>All topics covered in the span of the course are fair game for the exam.</li>
+    <li>The exam is worth 46% of your entire grade for the course, and a mark of at least 40% is needed to pass the course.</li>
+    <li>Aids are not permitted.</li>
+</ul>
+<p>
+
+Please review the <a href="{{ url_for('syllabus') }}">course syllabus</a> for information on AccessAbility, remarks for the exam
+and other useful information.<br>
+{% endblock %}
